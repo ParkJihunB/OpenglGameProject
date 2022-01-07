@@ -5,18 +5,239 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="리소스 파일">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="MathLibrary">
+      <UniqueIdentifier>{451e327d-b60d-416d-bf6a-d855a49e9643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphic">
+      <UniqueIdentifier>{0d59cff5-72a4-4fb5-991d-a1032565153c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{2227dc1f-b5be-4b3e-8c99-564aee05b8f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{f730c15c-a6aa-497c-b82d-967de07de313}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectManager">
+      <UniqueIdentifier>{100a175b-a514-4099-84ef-b9fb379e8722}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="State">
+      <UniqueIdentifier>{0afaf120-ae59-4011-9b71-611462ba77ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameStage">
+      <UniqueIdentifier>{ace31b9b-5abb-4a8e-b1f5-422a7d0c7f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{1bb31ff1-5c90-4bcf-aa30-9adc4f900ffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="affine2d.cpp">
+      <Filter>MathLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix2.cpp">
+      <Filter>MathLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="vector2.cpp">
+      <Filter>MathLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="vector3.cpp">
+      <Filter>MathLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic.cpp">
+      <Filter>Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="StateManager.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBody.cpp">
+      <Filter>ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionChecker.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="BreakOut.cpp">
+      <Filter>GameStage</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceInvader.cpp">
+      <Filter>GameStage</Filter>
+    </ClCompile>
+    <ClCompile Include="PopItem.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix4.cpp">
+      <Filter>MathLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="HudManager.cpp">
+      <Filter>ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiEnemy.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="System.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="affine2d.hpp">
+      <Filter>MathLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.hpp">
+      <Filter>MathLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix2.hpp">
+      <Filter>MathLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="vector2.hpp">
+      <Filter>MathLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="vector3.hpp">
+      <Filter>MathLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="vector4.hpp">
+      <Filter>MathLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.hpp">
+      <Filter>ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic.hpp">
+      <Filter>Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.hpp">
+      <Filter>Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.hpp">
+      <Filter>ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.hpp">
+      <Filter>ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.hpp">
+      <Filter>ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="State.hpp">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="StateManager.hpp">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBody.hpp">
+      <Filter>ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.hpp">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.hpp">
+      <Filter>ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionChecker.hpp">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="BreakOut.hpp">
+      <Filter>GameStage</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceInvader.hpp">
+      <Filter>GameStage</Filter>
+    </ClInclude>
+    <ClInclude Include="PopItem.hpp">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.hpp">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonObject.hpp">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.hpp">
+      <Filter>Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.hpp">
+      <Filter>Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix4.hpp">
+      <Filter>MathLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="HudManager.hpp">
+      <Filter>ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="AntiEnemy.hpp">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.hpp">
+      <Filter>GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
