@@ -91,6 +91,12 @@ Text * State::BuildText(std::string p_name, std::string textData)
 
 void State::PlayerMovement(Object * p_player)
 {
+	if (!objectmanager->IsPlayerAlive())
+	{
+		key_released_reset = true;
+		return;
+	}
+
 	vector2 current_transform = p_player->GetTransform().GetTranslation();
 	if (Input::IsKeyAnyPressed())
 	{

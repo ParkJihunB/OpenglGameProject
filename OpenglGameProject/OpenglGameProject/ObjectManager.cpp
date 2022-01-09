@@ -41,10 +41,10 @@ void ObjectManager::Quit()
 
 void ObjectManager::AddObject(std::string p_objectName)
 {
-	//if (m_objectList.find(p_objectName) != NULL) assert(false);
 	auto target = m_objectList.find(p_objectName);
 	m_objectList.insert(std::make_pair(p_objectName, new Object()));
 	std::cout << "ObjectManager::Object: " << p_objectName << " is added" << std::endl;
+	if (p_objectName == playerName) IsPlayerLive = false;
 }
 
 bool ObjectManager::RemoveObject(std::string p_objectName)
@@ -58,17 +58,22 @@ bool ObjectManager::RemoveObject(std::string p_objectName)
 			it->second = nullptr;
 			it = m_objectList.erase(it);
 			std::cout << "Object: " << p_objectName << " is removed" << std::endl;
+			if (p_objectName == playerName) IsPlayerLive = false;
 			return true;
 		}
 	}
-	return true;
+	return false;
 }
 
 Object * ObjectManager::GetObject(std::string p_objectName)
 {
 	auto target = m_objectList.find(p_objectName);
 	if (target == m_objectList.end())
-		assert(false); //There's no such object. Get back
+	{
+		//std::cout << p_objectName + "does not exist" << std::endl;
+		//assert(false);
+		return nullptr;
+	}
 
 	return target->second;
 }

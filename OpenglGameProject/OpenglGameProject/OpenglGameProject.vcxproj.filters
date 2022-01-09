@@ -37,6 +37,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{897f8650-9e78-4e49-8ee5-d2c44c5f2906}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -131,6 +134,9 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>Sound</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -238,6 +244,9 @@
     </ClInclude>
     <ClInclude Include="Enemy.hpp">
       <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.hpp">
+      <Filter>Sound</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

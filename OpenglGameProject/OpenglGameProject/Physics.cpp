@@ -19,13 +19,15 @@ bool Physics::Update(float dt)
 	for (std::map<std::string, Object*>::iterator i = m_objMap->begin();
 		i != m_objMap->end(); ++i)
 	{
+		if (i->second->GetRigidbody() == nullptr) continue;
 		std::map<std::string, Object*>::iterator j = i;
 		j++;
 		for (; j != m_objMap->end(); ++j)
 		{
 			if (i->first == j->first)
 				break;
-			if (i->second->m_objectType == ObjectType::antienemy && i->second->m_objectType == ObjectType::antienemy)
+			if (j->second->GetRigidbody() == nullptr) continue;
+			if (i->second->m_objectType == ObjectType::antienemy && j->second->m_objectType == ObjectType::antienemy)
 				continue;
 
 			if (i->second->move_type == MoveType::stay&& j->second->move_type == MoveType::stay)
@@ -67,7 +69,9 @@ bool Physics::Update(float dt)
 	for (std::map<std::string, Object*>::iterator i = m_objMap->begin();
 		i != m_objMap->end(); ++i)
 	{
-		integrate(i->second, dt);
+		if (i->second->GetRigidbody() == nullptr) continue;
+		if (i->second->IsDelete) continue;
+ 		integrate(i->second, dt);
 	}
 	return true;
 }

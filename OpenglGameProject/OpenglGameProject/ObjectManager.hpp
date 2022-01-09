@@ -24,12 +24,17 @@ public:
 	std::map <std::string, Object*>* GetObjectMapPointer() { return &m_objectList; }
 	int GetObjectsCount() { return (int)(m_objectList.size()); }
 
+	void SetPlayerName(std::string player) { playerName = player; }
+	bool IsPlayerAlive() { return IsPlayerLive; }
+
 public:
 	template <typename T>
 	T* AddObjectTemplate(std::string p_objectName);
 
 private:
 	std::map<std::string, Object*> m_objectList;
+	std::string playerName = "player";
+	bool IsPlayerLive = true;
 };
 
 template<typename T>
@@ -43,5 +48,6 @@ inline T* ObjectManager::AddObjectTemplate(std::string p_objectName)
 	T* newObj = new T();
 	m_objectList.insert(std::make_pair(p_objectName, newObj));
 	std::cout << "ObjectManager::Object: " << p_objectName << " is added" << std::endl;
+	if (p_objectName == playerName) IsPlayerLive = true;
 	return newObj;
 }

@@ -31,7 +31,6 @@ bool Engine::Init()
 	for (auto i : m_systemList) i->Init();
 
 	//Add all state(load all)
-	//
 	//m_stateManager->AddState("BreakOut", new BreakOut());
 	m_stateManager->AddState("SpaceInvader", new SpaceInvader());
 	

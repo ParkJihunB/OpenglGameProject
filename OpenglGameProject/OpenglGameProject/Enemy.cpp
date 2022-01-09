@@ -14,4 +14,5 @@ bool Enemy::Update()
 void Enemy::CollideWithType(ObjectType type)
 {
 	if (type == ObjectType::antienemy) IsDelete = true;
+	if (popWithPlayer && type == ObjectType::player) IsDelete = true;
 }
