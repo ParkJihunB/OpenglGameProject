@@ -3,8 +3,11 @@
 * @brief Engine functions
 */
 #include "Engine.hpp"
+#include "StartMenu.hpp"
 #include "BreakOut.hpp"
 #include "SpaceInvader.hpp"
+#include "StartMenu.hpp"
+#include "RiverRaid.hpp"
 
 /**
 * @brief Engine initalize
@@ -31,8 +34,10 @@ bool Engine::Init()
 	for (auto i : m_systemList) i->Init();
 
 	//Add all state(load all)
-	//m_stateManager->AddState("BreakOut", new BreakOut());
+	m_stateManager->AddState("StartMenu", new StartMenu());
+	m_stateManager->AddState("BreakOut", new BreakOut());
 	m_stateManager->AddState("SpaceInvader", new SpaceInvader());
+	m_stateManager->AddState("RiverRaid", new RiverRaid());
 	
 	m_state = m_stateManager->GetCurrentState();
 	m_objectManager = m_state->GetObjectManager();

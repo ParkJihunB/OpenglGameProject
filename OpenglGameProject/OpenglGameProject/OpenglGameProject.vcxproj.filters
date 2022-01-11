@@ -138,6 +138,12 @@
     <ClCompile Include="Sound.cpp">
       <Filter>Sound</Filter>
     </ClCompile>
+    <ClCompile Include="StartMenu.cpp">
+      <Filter>GameStage</Filter>
+    </ClCompile>
+    <ClCompile Include="RiverRaid.cpp">
+      <Filter>GameStage</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.hpp">
@@ -247,6 +253,12 @@
     </ClInclude>
     <ClInclude Include="Sound.hpp">
       <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="StartMenu.hpp">
+      <Filter>GameStage</Filter>
+    </ClInclude>
+    <ClInclude Include="RiverRaid.hpp">
+      <Filter>GameStage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

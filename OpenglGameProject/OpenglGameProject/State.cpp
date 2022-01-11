@@ -27,6 +27,7 @@ void State::ChangeLevel(std::string p_nextLevel)
 {
 	m_nextLevel = p_nextLevel;
 	level_change = true;
+	key_released_reset = true;
 	std::cout << "Ready to change state" << std::endl << std::endl;
 }
 
